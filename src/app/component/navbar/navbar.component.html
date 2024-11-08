@@ -1,4 +1,3 @@
-<!-- navbar.component.html -->
 <nav class="navbar navbar-expand-lg casino-navbar">
     <div class="container-fluid">
       <a class="navbar-brand casino-brand" href="#">Casino Admin</a>
@@ -7,19 +6,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
+          <li class="nav-item" [routerLinkActive]="'active'">
             <a class="nav-link casino-nav-link" [routerLink]="['/dashboard']">Dashboard</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" [routerLinkActive]="'active'">
             <a class="nav-link casino-nav-link" [routerLink]="['/users']">Users</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" [routerLinkActive]="'active'">
             <a class="nav-link casino-nav-link" [routerLink]="['/transactions']">Transactions</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" [routerLinkActive]="'active'">
             <a class="nav-link casino-nav-link" [routerLink]="['/games']">Game Management</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" [routerLinkActive]="'active'">
             <a class="nav-link casino-nav-link" [routerLink]="['/settings']">Settings</a>
           </li>
         </ul>

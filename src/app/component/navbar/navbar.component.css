@@ -1,6 +1,17 @@
 /* styles.css */
 
 /* Navbar Styling */
+  /* Highlight active navbar link */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #ffd700; /* Gold color for active link */
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 1);
+  }
+  
+  .navbar-nav .nav-item.active .nav-link:hover {
+    color: #ffcc00; /* Change color on hover for active link */
+  }
+  
 .casino-navbar {
     background-color: #121212; /* Dark background for a casino look */
     border-bottom: 2px solid #444; /* Subtle border for depth */
@@ -40,4 +51,3 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  
