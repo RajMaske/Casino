@@ -1,0 +1,73 @@
+<div class="container mt-4">
+    <h2 class="text-center casino-heading mb-4">Game Management</h2>
+  
+    <!-- Add Game Button -->
+    <button class="btn casino-btn-add mb-3" data-bs-toggle="modal" data-bs-target="#gameModal" (click)="onAddGame()">Add Game</button>
+  
+    <!-- Game List Table -->
+    <div class="table-container">
+      <table class="table casino-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Min Bet</th>
+            <th>Max Bet</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let game of games">
+            <td>{{ game.title }}</td>
+            <td>{{ game.description }}</td>
+            <td>{{ game.category }}</td>
+            <td>{{ game.minBet | currency }}</td>
+            <td>{{ game.maxBet | currency }}</td>
+            <td>
+              <button class="btn casino-btn-edit btn-sm me-2" data-bs-toggle="modal" data-bs-target="#gameModal" (click)="onEditGame(game)">Edit</button>
+              <button class="btn casino-btn-delete btn-sm" (click)="onDeleteGame(game.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Add/Edit Game Modal -->
+    <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header casino-modal-header">
+            <h5 class="modal-title" id="gameModalLabel">{{ isEditMode ? 'Edit Game' : 'Add Game' }}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" formControlName="title">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" formControlName="description"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input type="text" class="form-control" id="category" formControlName="category">
+              </div>
+              <div class="mb-3">
+                <label for="minBet" class="form-label">Min Bet</label>
+                <input type="number" class="form-control" id="minBet" formControlName="minBet">
+              </div>
+              <div class="mb-3">
+                <label for="maxBet" class="form-label">Max Bet</label>
+                <input type="number" class="form-control" id="maxBet" formControlName="maxBet">
+              </div>
+              <button type="submit" class="btn casino-btn-submit w-100">{{ isEditMode ? 'Update Game' : 'Add Game' }}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

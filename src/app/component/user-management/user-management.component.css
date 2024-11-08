@@ -1,0 +1,86 @@
+
+  
+  /* Heading Style */
+  .casino-heading {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #ffd700; /* Gold for casino feel */
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 1), 0px 0px 20px rgba(255, 165, 0, 0.7);
+  }
+  
+  /* Table Wrapper Styling for Scroll */
+  .table-wrapper {
+    overflow-x: auto; /* Horizontal scroll if the table width exceeds the container */
+    max-height: 400px; /* Optional: max height for vertical scrolling */
+  }
+  
+  /* Table Styling */
+  .table {
+    width: 100%;
+    min-width: 600px; /* Minimum width to ensure horizontal scrolling */
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .table th {
+    background-color: #1c1c1c;
+    color: #ffd700;
+  }
+  
+  .table td {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .table tr:nth-child(odd) {
+    background-color: #444;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #3a3a3a;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+  
+  /* Buttons Styling */
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Scrollbar Styling */
+  .table-wrapper::-webkit-scrollbar {
+    height: 12px; /* Horizontal scrollbar height */
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Make table cells responsive on mobile */
+  @media (max-width: 768px) {
+    .table th,
+    .table td {
+      padding: 8px; /* Decrease padding to make the table fit better */
+    }
+  
+    .casino-heading {
+      font-size: 1.5rem; /* Adjust heading font size for mobile screens */
+    }
+  }
+  

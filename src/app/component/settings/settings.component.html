@@ -1,0 +1,28 @@
+<!-- settings.component.html -->
+<div class="container mt-4">
+    <h2>Settings</h2>
+    <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="casinoName" class="form-label">Casino Name</label>
+        <input type="text" class="form-control" id="casinoName" formControlName="casinoName">
+      </div>
+      <div class="mb-3">
+        <label for="defaultCurrency" class="form-label">Default Currency</label>
+        <input type="text" class="form-control" id="defaultCurrency" formControlName="defaultCurrency">
+      </div>
+      <div class="mb-3">
+        <label for="paymentGateway" class="form-label">Payment Gateway</label>
+        <input type="text" class="form-control" id="paymentGateway" formControlName="paymentGateway">
+      </div>
+      <div class="mb-3">
+        <label for="minDeposit" class="form-label">Minimum Deposit</label>
+        <input type="number" class="form-control" id="minDeposit" formControlName="minDeposit">
+      </div>
+      <div class="mb-3">
+        <label for="maxWithdrawal" class="form-label">Maximum Withdrawal</label>
+        <input type="number" class="form-control" id="maxWithdrawal" formControlName="maxWithdrawal">
+      </div>
+      <button type="submit" class="btn btn-primary">Save Settings</button>
+    </form>
+  </div>
+  

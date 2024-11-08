@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Main Container */
+.casino-container {
+    background-color: #1b1b1b;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    background-color: #121212;
+    height: 100vh;
+    padding-top: 2rem;
+    color: #fff;
+  }
+  
+  .sidebar-title {
+    font-size: 1.5rem;
+    color: #ffcc00; /* Gold color */
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff9900, 0 0 10px #ff6600;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar .nav-link {
+    color: #e0e0e0;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #333;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #333;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  
+  /* Main Content */
+  main {
+    padding-top: 1.5rem;
+    background-color: #1e1e1e;
+  }
+  
+  .casino-navbar {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Card Styling */
+  .card {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    color: #ffcc00; /* Gold for titles */
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #e0e0e0;
+    font-size: 1.5rem;
+  }
+  /* Sidebar for small screens */
+@media (max-width: 767px) {
+    .sidebar {
+      position: absolute;
+      z-index: 1000;
+      background-color: #333;
+      width: 250px;
+      height: 100%;
+      top: 0;
+      left: -250px;
+      transition: 0.3s;
+    }
+    .sidebar.active {
+      left: 0;
+    }
+  }
+  
+  /* Main content when sidebar is hidden (on mobile) */
+  @media (max-width: 767px) {
+    .casino-main-content {
+      margin-left: 0;
+      transition: margin-left 0.3s;
+    }
+    .casino-container {
+      padding-left: 0;
+    }
+  }

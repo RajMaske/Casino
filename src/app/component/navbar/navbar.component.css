@@ -1,0 +1,43 @@
+/* styles.css */
+
+/* Navbar Styling */
+.casino-navbar {
+    background-color: #121212; /* Dark background for a casino look */
+    border-bottom: 2px solid #444; /* Subtle border for depth */
+    padding: 1rem;
+  }
+  
+  .casino-brand {
+    color: #ffcc00; /* Gold color for luxury */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff9900, 0 0 10px #ff6600; /* Neon glow effect */
+  }
+  
+  .casino-brand:hover {
+    color: #ffc107; /* Slight color change on hover */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffcc00' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .casino-nav-link {
+    color: #e0e0e0; /* Light text color for contrast */
+    font-size: 1.1rem;
+    margin: 0 0.75rem;
+    transition: color 0.3s;
+  }
+  
+  .casino-nav-link:hover {
+    color: #ffcc00; /* Gold color on hover */
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900;
+  }
+  
+  /* Add some padding for the dropdown in mobile view */
+  .navbar-nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  

@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <h2 class="text-center casino-heading mb-4">Transaction Management</h2>
+  
+    <!-- Transaction Table Wrapper for Scroll -->
+    <div class="table-wrapper">
+      <table class="table casino-table">
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>User</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.user }}</td>
+            <td>₹{{ transaction.amount }}</td>
+            <td>
+              <span class="badge" [ngClass]="{
+                'bg-success': transaction.status === 'approved',
+                'bg-warning': transaction.status === 'pending',
+                'bg-danger': transaction.status === 'declined'
+              }">
+                {{ transaction.status }}
+              </span>
+            </td>
+            <td>
+              <button *ngIf="transaction.status === 'pending'" class="btn casino-btn-approve" (click)="approve(transaction.id)">Approve</button>
+              <button *ngIf="transaction.status === 'pending'" class="btn casino-btn-decline" (click)="decline(transaction.id)">Decline</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
